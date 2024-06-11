@@ -1,3 +1,4 @@
+
 <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -40,7 +41,7 @@
                 
                     <td>    
                     <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
-                    <a href="index.php?page=edit-data" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
+                    <a href="index.php?page=edit-data&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
                     </td>
 
                   </tr>
