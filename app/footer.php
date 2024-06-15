@@ -1,31 +1,34 @@
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 
-  
-</div>
-<!-- ./wrapper -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+    </div>
+</footer>
+
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+<!-- <script>
   $.widget.bridge('uibutton', $.ui.button)
-</script>
+</script> -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
-<!-- <script src="plugins/sparklines/sparkline.js"></script> -->
-<!-- JQVMap -->
+<!-- <script src="plugins/sparklines/sparkline.js"></script>
+JQVMap -->
 <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
@@ -42,7 +45,7 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!-- <script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- <script src="dist/js/pages/dashboard.js"></script> -->
 
@@ -63,7 +66,7 @@
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
   $(function () {
-    $("#example1").DataTable({
+    $("#tabel1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
@@ -77,4 +80,25 @@
       "responsive": true,
     });
   });
+
+  $('.view-data').click(function(){
+    var nama_barang = $(this).attr('data-nama-barang');
+    var deskripsi = $(this).attr('data-deskripsi');
+    var kondisi = $(this).attr('data-kondisi');
+    var penanggungjawab = $(this).attr('data-penanggungjawab');
+    var foto = $(this).attr('data-foto');
+    document.getElementById('nama_barang').innerHTML = nama_barang;
+    document.getElementById('deskripsi').innerHTML = deskripsi;
+    document.getElementById('kondisi').innerHTML = kondisi;
+    document.getElementById('penanggungjawab').innerHTML = penanggungjawab;
+    console.log(nama_barang);
+  });
+
+
+  $(document).ready(function(){
+    setInterval(function(){
+      $('#report-barang').load("banner.php");
+    });
+  });
+  
 </script>

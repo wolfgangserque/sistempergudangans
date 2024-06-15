@@ -14,7 +14,7 @@
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-lg">Tambah Data</button>
               <br>
               <br>
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="tabel1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>No</th>
@@ -33,7 +33,7 @@
                     ?>
                   <tr>
 
-                    <td width="10%"><?php echo $no;?></td>
+                    <td width="1%"><?php echo $no;?></td>
                     <td  width="10%"><?php echo $barang['nama_barang'];?></td>
                     <td  width="10%"><?php echo $barang['deksripsi'];?></td>
                     <td  width="10%"><?php echo $barang['kondisi'];?></td>
@@ -42,7 +42,15 @@
                     <td>    
                     <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
                     <a href="index.php?page=edit-data&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
-                    </td>
+                    <a class="view-data btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" style="margin-left:20px; padding:7px"
+                    data-nama-barang="<?php echo $barang['nama_barang'];?>"
+                    data-deskripsi="<?php echo $barang['deksripsi'];?>"
+                    data-kondisi="<?php echo $barang['kondisi'];?>"
+                    data-penanggungjawab="<?php echo $barang['penanggungjawab'];?>"
+                  
+                    
+                    >Lihat Detail</a>
+                  </td>
 
                   </tr>
 
@@ -61,6 +69,9 @@
               </div>
               <!-- /.card-body -->
             </div>
+
+
+            
             <!-- /.card -->
           </div>
           <!-- /.col -->
@@ -68,9 +79,9 @@
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
-    </section>
+</section>
 
-  <div class="modal fade" id="modal-lg">
+<div class="modal fade" id="modal-lg">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">
@@ -111,6 +122,53 @@
       <div class="modal-footer justify-content-between">
       <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
       <button type="submit" class="btn btn-primary">Simpan</button>
+      </div>
+      </div>
+      </form>
+
+  </div>
+
+</div>
+
+<!-- Modal View Data -->
+<div class="modal fade" id="modal-view">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h4 class="modal-title">View Data</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+        </div>
+
+        <form method="get" action="add/tambahdata.php">
+          <div class="modal-body">  
+          <div class="row">
+              <div class="col">
+                Nama Barang: <div id="nama_barang"></div>
+                </div>
+            
+                <div class="col">
+                  Deskripsi: <div id="deskripsi"></div>
+                </div>
+
+                <div class="col">
+                  Kondisi: <div id="kondisi"></div>
+                </div>
+
+                <div class="col">
+                  Penanggungjawab: <div id="penanggungjawab"></div>
+                </div>
+
+                
+                
+
+          </div>
+          </div>
+       
+
+      <div class="modal-footer justify-content-between">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
       </div>
       </div>
       </form>

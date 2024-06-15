@@ -54,15 +54,16 @@ include('header.php'); ?>
     include('dashboard.php');
   }
   ?>
+  
 </div>
+
+<?php include('footer.php');?>
+
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-
-<?php include('footer.php'); ?>
-
 </body>
 </html>
