@@ -63,6 +63,23 @@ include('header.php'); ?>
     include('edit/edit-data-c.php');
     }
 
+    // admin 
+
+    else if ($_GET['page']=='data_gudang_a_admin'){
+      include('admin/data_gudang_a.php');
+      }
+
+      else if ($_GET['page']=='data_gudang_b_admin'){
+        include('admin/data_gudang_b.php');
+        }
+
+
+        else if ($_GET['page']=='data_gudang_c_admin'){
+          include('admin/data_gudang_c.php');
+          }
+
+
+
     else{
       include('not_found.php');
     }

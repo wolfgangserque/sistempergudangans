@@ -101,4 +101,11 @@ JQVMap -->
     });
   });
   
+  $(document).ready(function(){
+    setInterval(function(){
+      $('#pie-chart').load("pie-chart.php");
+    });
+  });
+  
+
 </script>

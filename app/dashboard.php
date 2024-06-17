@@ -9,6 +9,13 @@
         <!-- /.row -->
         <!-- Main row -->
 
+
+        <!-- <div class="row" id="chart-barang">
+
+       
+        </div>
+
+    -->
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
