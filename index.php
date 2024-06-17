@@ -16,12 +16,12 @@
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="app/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-image:url('app/img/bg.png')">
 <div class="login-box">
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
+  <div class="card card-outline card-info">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>INI HALAMAN LOGIN</b></a>
+      <a href="../../index2.html" class="h1"><b>Storage Pro 0.1</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Silahkan Login untuk membuka sesi</p>
@@ -45,7 +45,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+            <button type="submit" class="btn btn-info btn-block">Masuk</button>
           </div>
           <!-- /.col -->
         </div>

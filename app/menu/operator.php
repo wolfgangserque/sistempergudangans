@@ -14,7 +14,7 @@
           </li>
           
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Gudang
@@ -23,7 +23,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.php?page=data_gudang_a" class="nav-link active">
+                <a href="index.php?page=data_gudang_a" class="nav-link">
                   <i class="far  fa-folder nav-icon"></i>
                   <p>Data Gudang A</p>
                 </a>

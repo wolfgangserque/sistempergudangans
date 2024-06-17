@@ -14,7 +14,7 @@
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-lg">Tambah Data</button>
               <br>
               <br>
-                <table id="tabel1" class="table table-bordered table-hover">
+                <table id="example2" class=" table table-bordered table-hover">
                   <thead>
                   <tr>
                     <th>No</th>
@@ -27,7 +27,7 @@
                   <tbody>
                     <?php 
                     $no=0;
-                    $query = mysqli_query($koneksi, "SELECT * FROM tb_gudang");
+                    $query = mysqli_query($koneksi, "SELECT * FROM tb_gudang_c");
                     while($barang = mysqli_fetch_array($query)){
                       $no++
                     ?>
@@ -35,16 +35,16 @@
 
                     <td width="1%"><?php echo $no;?></td>
                     <td><?php echo $barang['nama_barang'];?></td>
-                    <td><?php echo $barang['deksripsi'];?></td>
+                    <td><?php echo $barang['deskripsi'];?></td>
                     <td><?php echo $barang['kondisi'];?></td>
                     <td><?php echo $barang['penanggungjawab'];?></td>
                 
                     <td>    
                     <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger" style="margin-left:100px;">Hapus</a>
-                    <a href="index.php?page=edit-data&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
+                    <a href="index.php?page=edit-data-c&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
                     <a class="view-data btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" style="margin-left:20px; padding:7px"
                     data-nama-barang="<?php echo $barang['nama_barang'];?>"
-                    data-deskripsi="<?php echo $barang['deksripsi'];?>"
+                    data-deskripsi="<?php echo $barang['deskripsi'];?>"
                     data-kondisi="<?php echo $barang['kondisi'];?>"
                     data-penanggungjawab="<?php echo $barang['penanggungjawab'];?>"
                   
@@ -56,7 +56,7 @@
 
                   <?php }?>
                   </tbody>
-                  
+                 
                 </table>
               </div>
               <!-- /.card-body -->
@@ -83,7 +83,7 @@
         </button>
         </div>
 
-        <form method="get" action="add/tambahdata.php">
+        <form method="get" action="add/tambahdata_c.php">
           <div class="modal-body">  
           <div class="row">
               <div class="col">
@@ -91,7 +91,7 @@
                 </div>
             
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Deskripsi" name="deksripsi" required>
+                <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" required>
                 </div>
 
                 <div class="col">
@@ -188,7 +188,7 @@
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        window.location=("delete/hapus_data.php?id="+data_id);
+        window.location=("delete/hapus_data_c.php?id="+data_id);
       } 
     })
 

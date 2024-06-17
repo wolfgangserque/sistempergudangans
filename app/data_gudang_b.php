@@ -10,7 +10,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-
+             
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-lg">Tambah Data</button>
               <br>
               <br>
@@ -27,24 +27,24 @@
                   <tbody>
                     <?php 
                     $no=0;
-                    $query = mysqli_query($koneksi, "SELECT * FROM tb_gudang");
+                    $query = mysqli_query($koneksi, "SELECT * FROM tb_gudang_b");
                     while($barang = mysqli_fetch_array($query)){
                       $no++
                     ?>
                   <tr>
 
-                    <td width="1%"><?php echo $no;?></td>
+                    <td><?php echo $no;?></td>
                     <td><?php echo $barang['nama_barang'];?></td>
-                    <td><?php echo $barang['deksripsi'];?></td>
+                    <td><?php echo $barang['deskripsi'];?></td>
                     <td><?php echo $barang['kondisi'];?></td>
                     <td><?php echo $barang['penanggungjawab'];?></td>
                 
                     <td>    
                     <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger" style="margin-left:100px;">Hapus</a>
-                    <a href="index.php?page=edit-data&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
+                    <a href="index.php?page=edit-data-b&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
                     <a class="view-data btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" style="margin-left:20px; padding:7px"
                     data-nama-barang="<?php echo $barang['nama_barang'];?>"
-                    data-deskripsi="<?php echo $barang['deksripsi'];?>"
+                    data-deskripsi="<?php echo $barang['deskripsi'];?>"
                     data-kondisi="<?php echo $barang['kondisi'];?>"
                     data-penanggungjawab="<?php echo $barang['penanggungjawab'];?>"
                   
@@ -83,7 +83,7 @@
         </button>
         </div>
 
-        <form method="get" action="add/tambahdata.php">
+        <form method="get" action="add/tambahdata_b.php">
           <div class="modal-body">  
           <div class="row">
               <div class="col">
@@ -133,7 +133,7 @@
         </button>
         </div>
 
-        <form method="get" action="add/tambahdata.php">
+        <form method="get" action="add/tambahdata_b.php">
           <div class="modal-body">  
           <div class="row">
               <div class="col">
@@ -188,7 +188,7 @@
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        window.location=("delete/hapus_data.php?id="+data_id);
+        window.location=("delete/hapus_data_b.php?id="+data_id);
       } 
     })
 

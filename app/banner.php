@@ -1,13 +1,21 @@
 <?php
 include("../config/config.php");
-$query= mysqli_query($koneksi, "SELECT count(id) AS jumlahbrang FROM tb_gudang");
-$view = mysqli_fetch_array($query);?>
+$query1= mysqli_query($koneksi, "SELECT count(id) AS jumlahbrang FROM tb_gudang");
+$view1 = mysqli_fetch_array($query1);
 
+
+$query2= mysqli_query($koneksi, "SELECT count(id) AS jumlahbrang2 FROM tb_gudang_b");
+$view2 = mysqli_fetch_array($query2);
+
+$query3= mysqli_query($koneksi, "SELECT count(id) AS jumlahbrang3 FROM tb_gudang_c");
+$view3 = mysqli_fetch_array($query3);
+
+?>
           <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $view['jumlahbrang']?></h3>
+                <h3><?php echo $view1['jumlahbrang']?></h3>
 
                 <p>Total Barang Gudang A</p>
               </div>
@@ -22,9 +30,9 @@ $view = mysqli_fetch_array($query);?>
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3><?php echo $view2['jumlahbrang2']?></h3>
 
-                <p>Bounce Rate</p>
+                <p>Total Barang Gudang B</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -37,9 +45,9 @@ $view = mysqli_fetch_array($query);?>
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <h3><?php echo $view3['jumlahbrang3']?></h3>
 
-                <p>User Registrations</p>
+                <p>Total Barang Gudang C</p>
               </div>
               <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -47,6 +55,5 @@ $view = mysqli_fetch_array($query);?>
              
             </div>
           </div>
-          <!-- ./col -->
         
           <!-- ./col -->

@@ -1,6 +1,6 @@
 <?php 
 $id = $_GET['id'];
-$query = mysqli_query($koneksi,"SELECT * FROM tb_gudang WHERE id='$id'");
+$query = mysqli_query($koneksi,"SELECT * FROM tb_gudang_b WHERE id='$id'");
 $view = mysqli_fetch_array($query);
 ?>
 
@@ -14,8 +14,7 @@ $view = mysqli_fetch_array($query);
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form method='post' action='update/update_data.php' enctype="multipart/form-data">
-
+                <form method='get' action='update/update_data_b.php' enctype="multipart/form-data">
 
                 <div class="row">
                         <div class="col-sm-6">
@@ -29,7 +28,7 @@ $view = mysqli_fetch_array($query);
                         <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Deskripsi</label>
-                                <input type="text" class="form-control" placeholder="Masukan deskripsi disini" name='deksripsi' value="<?php echo $view['deksripsi'];?>">
+                                <input type="text" class="form-control" placeholder="Masukan deskripsi disini" name='deskripsi' value="<?php echo $view['deskripsi'];?>">
                           </div>
                         </div>
                 </div>
@@ -54,9 +53,9 @@ $view = mysqli_fetch_array($query);
                         </div>
 
 
+                     
                 </div>
 
-                
 
                 <div class="row">
                   <button type="submit" class="btn btn-sm btn-info mt-3">Simpan</button>

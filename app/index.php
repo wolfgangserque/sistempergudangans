@@ -41,10 +41,27 @@ include('header.php'); ?>
     include('data_gudang_a.php');
     }
 
+    else if ($_GET['page']=='data_gudang_b'){
+      include('data_gudang_b.php');
+      }
+
+    else if ($_GET['page']=='data_gudang_c'){
+      include('data_gudang_c.php');
+        }
+
     
     else if ($_GET['page']=='edit-data'){
       include('edit/edit-data.php');
       }
+
+
+    else if ($_GET['page']=='edit-data-b'){
+        include('edit/edit-data-b.php');
+        }
+
+    else if ($_GET['page']=='edit-data-c'){
+    include('edit/edit-data-c.php');
+    }
 
     else{
       include('not_found.php');
