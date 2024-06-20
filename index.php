@@ -15,16 +15,24 @@
   <link rel="stylesheet" href="app/dist/css/adminlte.min.css">
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="app/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="app/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="app/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="app/favicon/favicon-16x16.png">
+    <link rel="manifest" href="app/favicon/site.webmanifest">
+    
 </head>
 <body class="hold-transition login-page" style="background-image:url('app/img/bg.png')">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-info">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Storage Pro 0.1</b></a>
+    <img src="app/dist/img/AdminLTELogo.png" style="width:50px; margin-bottom:20px;">  <a href="../../index2.html" class="h1"><b>Storage Pro</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Silahkan Login untuk membuka sesi</p>
+      <p class="login-box-msg">Selamat Datang <img src="app/emoji/smile.svg" style="width:25px"><img src="app/emoji/hand.svg" style="width:25px"> <br> Silahkan login untuk memulai sesi</p>
 
       <form action="config/auth.php" method="post">
         <div class="input-group mb-3">

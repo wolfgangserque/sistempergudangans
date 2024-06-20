@@ -6,7 +6,7 @@
           
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
+              <h3 class="card-title">Data Gudang B</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -77,7 +77,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">
-        <h4 class="modal-title">Large Modal</h4>
+        <h4 class="modal-title">Form</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">×</span>
         </button>
@@ -91,14 +91,14 @@
                 </div>
             
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Deskripsi" name="deksripsi" required>
+                <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" required>
                 </div>
 
                 <div class="col">
                   <select class="custom-select" name="kondisi" required>
                     <option value="">Pilih Kondisi</option>
-                    <option value="1">Baru</option>
-                    <option value="2">Bekas</option>
+                    <option value="baru">Baru</option>
+                    <option value="bekas">Bekas</option>
                   </select>
                   <div class="invalid-feedback">Example invalid custom select feedback</div>
                 </div>

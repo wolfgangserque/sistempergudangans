@@ -17,6 +17,10 @@
 
     -->
         <!-- /.row (main row) -->
+
+
+        <?php include('profile.php');
+        ?>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
