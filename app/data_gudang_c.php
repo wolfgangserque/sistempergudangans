@@ -40,9 +40,9 @@
                     <td><?php echo $barang['penanggungjawab'];?></td>
                 
                     <td>    
-                    <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger" style="margin-left:100px;">Hapus</a>
-                    <a href="index.php?page=edit-data-c&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success" style="margin-left:20px;">Sunting</a>
-                    <a class="view-data btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" style="margin-left:20px; padding:7px"
+                    <a onclick="hapus_data(<?php echo $barang['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
+                    <a href="index.php?page=edit-data-c&& id=<?php echo $barang['id'];?>" class="btn btn-sm btn-success">Sunting</a>
+                    <a class="view-data btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-view"
                     data-nama-barang="<?php echo $barang['nama_barang'];?>"
                     data-deskripsi="<?php echo $barang['deskripsi'];?>"
                     data-kondisi="<?php echo $barang['kondisi'];?>"
