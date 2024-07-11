@@ -29,7 +29,7 @@ $view = mysqli_fetch_array($query);
                         <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Deskripsi</label>
-                                <input type="text" class="form-control" placeholder="Masukan deskripsi disini" name='deksripsi' value="<?php echo $view['deskripsi'];?>">
+                                <input type="text" class="form-control" placeholder="Masukan deskripsi disini" name='deskripsi' value="<?php echo $view['deskripsi'];?>">
                           </div>
                         </div>
                 </div>
@@ -40,8 +40,8 @@ $view = mysqli_fetch_array($query);
                             <label>Kondisi</label>
                               <select class="custom-select" name="kondisi" required>
                               <option value="<?php echo $view['kondisi'];?>" selected><?php echo $view['kondisi'];?></option>
-                              <option value="1">Baru</option>
-                              <option value="2">Bekas</option>
+                              <option value="Baru">Baru</option>
+                              <option value="Bekas">Bekas</option>
                             </select>
                           </div>
                         </div>

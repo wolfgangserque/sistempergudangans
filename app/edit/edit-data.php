@@ -40,8 +40,8 @@ $view = mysqli_fetch_array($query);
                             <label>Kondisi</label>
                               <select class="custom-select" name="kondisi" required>
                               <option value="<?php echo $view['kondisi'];?>" selected><?php echo $view['kondisi'];?></option>
-                              <option value="1">Baru</option>
-                              <option value="2">Bekas</option>
+                              <option value="Baru">Baru</option>
+                              <option value="Bekas">Bekas</option>
                             </select>
                           </div>
                         </div>

@@ -97,8 +97,8 @@
                 <div class="col">
                   <select class="custom-select" name="kondisi" required>
                     <option value="">Pilih Kondisi</option>
-                    <option value="baru">Baru</option>
-                    <option value="bekas">Bekas</option>
+                    <option value="Baru">Baru</option>
+                    <option value="Bekas">Bekas</option>
                   </select>
                   <div class="invalid-feedback">Example invalid custom select feedback</div>
                 </div>
